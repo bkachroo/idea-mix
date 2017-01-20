@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
+        "HTMLFiles/xhtml-math11-f.dtd">
+
+<!-- Created with the Wolfram Language : www.wolfram.com -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <title>
+  Mixing
+ </title>
+ <link href="HTMLFiles/Mixing.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<p class="Text">
+ Notebook for experiments on idea/algorithm combination: genetic programming, evolution, enumeration, adjacent possible, paring away (abstraction), analysis (breaking down), synthesis (simulation), mixing (functional or blocks or encoding), network encoding.<br />Any form of encoding an idea/algorithm/program can be mixed, but which produce the most interesting results?<br />Example: algebraic structure definition made from string... but they tend to build on each other. See, randomness doesn&rsquo;t work, you need preservation and building cumulatively, like a series of molecular reactions.
+</p>
+
+
+
+<p class="Text">
+ Start with CA: take two rules (list of eight binary digits) and combine them with sexual selection, random choice from each side 50/50 for each digit.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Mixing_1.png" alt="Mixing_1.png" width="588" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/Mixing_2.png" alt="Mixing_2.png" width="630" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/Mixing_3.png" alt="Mixing_3.png" width="635" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Mixing_4.gif" alt="Mixing_4.gif" width="1162" height="395" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ How interesting is that? Those diagonal ones have a very different behaviour. For reference, 30 and 110:
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Mixing_5.gif" alt="Mixing_5.gif" width="70" height="39" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Mixing_6.gif" alt="Mixing_6.gif" width="360" height="360" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Mixing_7.gif" alt="Mixing_7.gif" width="360" height="360" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/Mixing_8.gif" alt="Mixing_8.gif" width="635" height="60" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Mixing_9.gif" alt="Mixing_9.gif" width="360" height="360" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Mixing_10.gif" alt="Mixing_10.gif" width="360" height="360" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Mixing_11.gif" alt="Mixing_11.gif" width="1162" height="395" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Clearly this method of combination doesn&rsquo;t preserve the properties of complexity.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Mixing_12.png" alt="Mixing_12.png" width="4" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/Mixing_13.gif" alt="Mixing_13.gif" width="745" height="123" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Mixing_14.gif" alt="Mixing_14.gif" width="360" height="360" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Mixing_15.gif" alt="Mixing_15.gif" width="360" height="360" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Wow! Combining two CA&rsquo;s in series gives a new CA with dependence on the nearest five instead of the nearest three! And that process can keep on going! Also there are different diffusion slopes. Does this result in all possible 5-CAs? 2^(2^5)=4.3 billion ways. And 256*255=65 thousand ways. Totally different! Also seems that flipping the order gives the colour-reversed pattern.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Mixing_16.gif" alt="Mixing_16.gif" width="415" height="144" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Mixing_17.gif" alt="Mixing_17.gif" width="360" height="360" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Mixing_18.gif" alt="Mixing_18.gif" width="360" height="360" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Mixing_19.gif" alt="Mixing_19.gif" width="360" height="360" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ The properties of the rules seem to actually mix together this time, and least for nonrandom inputs. But rule 30 somehow overpowers rule 110. You know what, the switched order is extremely similar but not actually the same! But just very, very slightly different. How odd. Now to test associativity: (110x31)x30=110x(31x30)?
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Mixing_20.gif" alt="Mixing_20.gif" width="647" height="102" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Mixing_21.gif" alt="Mixing_21.gif" width="360" height="363" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Mixing_22.gif" alt="Mixing_22.gif" width="360" height="363" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Mixing_23.gif" alt="Mixing_23.gif" width="360" height="363" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ It&rsquo;s associative but not even a little commutative. Also (as seen below) the chaotic-ness of 30 has been damped out by the combination of 31 and 110, interestingly. So the properties really seem to be combining.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Mixing_24.png" alt="Mixing_24.png" width="491" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Mixing_25.gif" alt="Mixing_25.gif" width="360" height="363" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/Mixing_26.gif" alt="Mixing_26.gif" width="654" height="60" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Mixing_27.gif" alt="Mixing_27.gif" width="360" height="363" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Mixing_28.gif" alt="Mixing_28.gif" width="360" height="363" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ But not so here with a different combination of rules, so it&rsquo;s unclear and needs further investigation. I want a more generalized function to combine combinations.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Mixing_29.gif" alt="Mixing_29.gif" width="865" height="270" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Mixing_30.gif" alt="Mixing_30.gif" width="775" height="182" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Mixing_31.gif" alt="Mixing_31.gif" width="775" height="182" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/Mixing_32.gif" alt="Mixing_32.gif" width="523" height="81" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Mixing_33.gif" alt="Mixing_33.gif" width="1054" height="380" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Mixing_34.gif" alt="Mixing_34.gif" width="1054" height="380" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Mixing_35.gif" alt="Mixing_35.gif" width="1054" height="380" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Imagine, combining two complex rules together kills them.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Mixing_36.png" alt="Mixing_36.png" width="4" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/Mixing_37.png" alt="Mixing_37.png" width="4" height="17" style="vertical-align:middle" />
+</p>
+
+
+
+
+<div style="font-family:Helvetica; font-size:11px; width:100%; border:1px none #999999; border-top-style:solid; padding-top:2px; margin-top:20px;">
+ <a href="http://www.wolfram.com/language/" style="color:#000; text-decoration:none;">
+  <span style="color:#555555">Created with the Wolfram Language</span> 
+ </a>
+</div>
+</body>
+
+</html>
