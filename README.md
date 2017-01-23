@@ -6,4 +6,4 @@ The code, results and comments are contained in Mixing.nb, which can be opened/e
 ## Results
 View the results at LINK, and an executable copy of the notebook/code on the cloud at LINK. One important one: combining two nearest-neighbour CA rules in series makes a new CA-rule, not part of the original set but of next-nearest neighbours! This process continues to infinity when you get a CA that uses every input cell to compute every output cell (discrete neural network).
 ## Next Steps
-Build a bunch of functional building blocks of algorithms (ex. select index, cut array) and enumerate through their combinations and examine the resulting behaviours. 
+Build a bunch of functional building blocks of algorithms (ex. select index, cut array) and enumerate through their combinations and examine the resulting behaviours. One problem to solve is making sure no destructive combination occure (infinite loops, type errors), which requires choosing building blocks wisely (make sure they always fit together).
